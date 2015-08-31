@@ -11,6 +11,7 @@
   </properties>
   <modules>
   	<module>hibernate-demos</module>
+  	<module>java8-demos</module>
   </modules>
   <dependencies>
 	<dependency>
