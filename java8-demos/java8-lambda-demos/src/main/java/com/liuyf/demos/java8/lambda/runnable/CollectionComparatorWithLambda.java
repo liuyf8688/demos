@@ -52,8 +52,7 @@ public class CollectionComparatorWithLambda {
 		// (5) Sort using reference with static method
 	}
 	
-	private static 
-	static class Person {
+	private static class Person {
 		
 		private String firstName;
 		private String lastName;
@@ -69,9 +68,11 @@ public class CollectionComparatorWithLambda {
 		public String getFirstName() {
 			return firstName;
 		}
+		@SuppressWarnings("unused")
 		public String getLastName() {
 			return lastName;
 		}
+		@SuppressWarnings("unused")
 		public int getAge() {
 			return age;
 		}

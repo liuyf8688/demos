@@ -8,8 +8,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
 import org.liuyf.demos.hibernate.pojo.Address;
@@ -17,6 +15,7 @@ import org.liuyf.demos.hibernate.pojo.Person;
 
 public class TestHibernateLazyLoad {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() throws HibernateException, MalformedURLException {
 		
