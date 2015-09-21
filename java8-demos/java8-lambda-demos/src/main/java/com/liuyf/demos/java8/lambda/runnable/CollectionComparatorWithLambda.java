@@ -2,6 +2,7 @@ package com.liuyf.demos.java8.lambda.runnable;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class CollectionComparatorWithLambda {
@@ -26,7 +27,7 @@ public class CollectionComparatorWithLambda {
 				return -1;
 			}
 		});
-		
+		System.out.println("Original: ");
 		lists.forEach((o1) -> System.out.println(o1));
 
 		System.out.println("=====================================");
@@ -41,18 +42,50 @@ public class CollectionComparatorWithLambda {
 		Collections.sort(persons, (Person p1, Person p2) -> {
 			return p1.getFirstName().compareTo(p2.getFirstName());
 		});
+		System.out.println("Basic lambda expression: ");
 		persons.forEach((p) -> System.out.println(p.getFirstName()));
 		
 		System.out.println("=====================================");
 		
 		// (4) No type Definitions
 		Collections.sort(persons, (p1, p2) -> p1.getFirstName().compareTo(p2.getFirstName()));
+		System.out.println("No type definitions: ");
 		persons.forEach((p) -> System.out.println(p.getFirstName()));
 		
+		System.out.println("=====================================");
+		
 		// (5) Sort using reference with static method
+		Collections.sort(persons, CollectionComparatorWithLambda::compareByFirstName);
+		System.out.println("Using static method reference: ");
+		persons.forEach((p) -> System.out.println(p.getFirstName()));
+		
+		System.out.println("=====================================");
+		
+		// (6) Sort using to extract Comparator
+		Collections.sort(persons, Comparator.comparing(Person::getAge));
+		System.out.println("Extract Comparator: ");
+		persons.forEach((p) -> System.out.println(p.getFirstName()));
+		
+		System.out.println("=====================================");
+		
+		// (7) Reverse Comparator
+		Comparator<Person> comparator = (p1, p2) -> p1.getFirstName().compareTo(p2.getFirstName());
+		Collections.sort(persons, comparator.reversed());
+		System.out.println("Reverse Comparator: ");
+		persons.forEach((p) -> System.out.println(p.getFirstName()));
+		
+		System.out.println("=====================================");
+		
+		// (8) Multiple conditions with Lambda
+		Collections.sort(persons, Comparator.comparing(Person::getFirstName).thenComparing(Person::getAge));
+		System.out.println("Multiple conditions with Lambda: ");
+		persons.forEach((p) -> System.out.println(p.getFirstName()));
 	}
 	
-	private static 
+	private static int compareByFirstName(Person p1, Person p2) {
+		return -1 * p1.getFirstName().compareTo(p2.getFirstName());
+	}
+	
 	static class Person {
 		
 		private String firstName;

@@ -12,6 +12,7 @@
   <modules>
   	<module>hibernate-demos</module>
   	<module>java8-demos</module>
+  	<module>spring-annotation-demos</module>
   </modules>
   <dependencies>
 	<dependency>

@@ -4,11 +4,11 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -20,10 +20,8 @@ public class Person {
 			)
 	private Long id;
 	private String name;
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "person_receive_addresses",
-				joinColumns = @JoinColumn(name = "person_id"),
-				inverseJoinColumns = @JoinColumn(name = "address_id"))
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "person_id")
 	private Set<Address> receiveAddresses;
 	
 	public Long getId() {
