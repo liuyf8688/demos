@@ -16,6 +16,7 @@ public class TestHibernateLazyLoad {
 	
 	private Session session = null;
 	
+	@SuppressWarnings("deprecation")
 	@Before
 	public void setUp() {
 		sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -34,7 +35,7 @@ public class TestHibernateLazyLoad {
 
 	@Test(expected = SessionException.class)
 	public void testTransactionEndedThenTryToAccessLazyLoadFieldExpectedSessionException() throws HibernateException, MalformedURLException {
-		
+
 		try {
 			
 			

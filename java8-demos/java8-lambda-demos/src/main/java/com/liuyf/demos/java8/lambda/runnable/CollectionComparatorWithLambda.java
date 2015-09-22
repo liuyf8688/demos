@@ -86,7 +86,8 @@ public class CollectionComparatorWithLambda {
 		return -1 * p1.getFirstName().compareTo(p2.getFirstName());
 	}
 	
-	static class Person {
+
+	private static class Person {
 		
 		private String firstName;
 		private String lastName;
@@ -102,6 +103,7 @@ public class CollectionComparatorWithLambda {
 		public String getFirstName() {
 			return firstName;
 		}
+		@SuppressWarnings("unused")
 		public String getLastName() {
 			return lastName;
 		}
