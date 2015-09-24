@@ -34,6 +34,8 @@
 
         <mapping class="org.liuyf.demos.hibernate.pojo.Person" />
         <mapping class="org.liuyf.demos.hibernate.pojo.Address" />
+        <mapping class="org.liuyf.demos.hibernate.mapping.collection.pojo.UserInfo" />
+
 
     </session-factory>
 
