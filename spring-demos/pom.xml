@@ -10,5 +10,6 @@
   <name>spring-demos</name>
   <modules>
   	<module>../spring-annotations-demos</module>
+  	<module>spring-boot-without-parent-pom-demos</module>
   </modules>
 </project>
