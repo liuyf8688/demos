@@ -13,6 +13,7 @@
   	<module>hibernate-demos</module>
   	<module>java8-demos</module>
   	<module>spring-demos</module>
+  	<module>alibaba-demos</module>
   </modules>
   <dependencies>
 	<dependency>
