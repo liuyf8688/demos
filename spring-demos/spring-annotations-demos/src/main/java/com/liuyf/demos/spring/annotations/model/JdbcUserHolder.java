@@ -1,9 +1,7 @@
 package com.liuyf.demos.spring.annotations.model;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class JdbcUserHolder {
 
 	@Value(value = "${jdbc.username}")
@@ -18,6 +16,17 @@ public class JdbcUserHolder {
 
 	public String getPassword() {
 		return password;
+	}
+	
+	public void init() {
+		System.out.println("setup username : " + getUserName() + "  =====>>>  " + getPassword());
+	}
+	
+	public void destory() {
+		userName = null;
+		password = null;
+		
+		System.out.println("remove the userName and password.");
 	}
 	
 }
