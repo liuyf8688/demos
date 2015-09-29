@@ -29,8 +29,28 @@ public class SpringAnnotationTest {
 	@Test
 	public void loadDataFromPropertyFlieWithAnnotation() {
 		JdbcUserHolder holder = context.getBean(JdbcUserHolder.class);
-		
 		assertEquals("liuyf", holder.getUserName());
+	}
+	
+	
+	@Test
+	public void loadDataFromPropertyFlieWithAnnotationExpectedSpecifyingValueIsMySQL1() {
+		JdbcUserHolder holder = context.getBean(JdbcUserHolder.class);
+		assertEquals("MySQL1", holder.getCurrentSQLType());
+	}
+	
+	@Test
+	public void loadDataFromPropertyFlieWithAnnotationExpectedInitArrays() {
+		JdbcUserHolder holder = context.getBean(JdbcUserHolder.class);
+		assertEquals("MySQL1", holder.getSupportSQLTypes().get(0));
+		assertEquals("SQLServer", holder.getSupportSQLTypes().get(1));
+	}
+
+	@Test
+	public void loadDataFromPropertyFlieWithAnnotationExpectedInitArraysUsingDefaultValue() {
+		JdbcUserHolder holder = context.getBean(JdbcUserHolder.class);
+		assertEquals("PostgrSQL", holder.getNoSupportSQLTypes().get(0));
+		assertEquals("HyperSQL", holder.getNoSupportSQLTypes().get(1));
 	}
 
 }
