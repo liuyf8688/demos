@@ -11,10 +11,11 @@
   </root>
   
 <!--   <logger name="org.hibernate" level="INFO" /> -->
-<!--   <logger name="org.hibernate.id.factory.internal" level="INFO" /> -->
-<!--   <logger name="org.hibernate.internal.util.xml" level="INFO" /> -->
-<!--   <logger name="org.hibernate.internal.util.xml" level="INFO" /> -->
-<!--   <logger name="org.hibernate.tool" level="INFO" /> -->
-<!--   <logger name="org.hibernate.type" level="INFO" /> -->
+  <logger name="org.hibernate.cfg" level="INFO" />
+  <logger name="org.hibernate.engine.jdbc" level="INFO" />
+  <logger name="org.hibernate.hql.internal.ast" level="INFO" />
+  <logger name="org.hibernate.id.factory.internal" level="INFO" />
+  <logger name="org.hibernate.loader.plan" level="INFO" />
+  <logger name="org.hibernate.type" level="INFO" />
   
 </configuration>

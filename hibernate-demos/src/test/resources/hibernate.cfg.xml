@@ -21,7 +21,7 @@
         <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
 
         <!-- Enable Hibernate's automatic session context management -->
-<!--         <property name="current_session_context_class">thread</property> -->
+        <property name="current_session_context_class">thread</property>
 
         <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
@@ -30,10 +30,12 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create-drop</property>
 
         <mapping class="org.liuyf.demos.hibernate.pojo.Person" />
         <mapping class="org.liuyf.demos.hibernate.pojo.Address" />
+        <mapping class="org.liuyf.demos.hibernate.mapping.collection.pojo.UserInfo" />
+
 
     </session-factory>
 

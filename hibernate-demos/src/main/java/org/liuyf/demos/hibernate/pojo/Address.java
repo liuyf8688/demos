@@ -1,9 +1,11 @@
 package org.liuyf.demos.hibernate.pojo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Address {
@@ -14,6 +16,14 @@ public class Address {
 			strategy = GenerationType.IDENTITY
 			)
 	private Long id;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Person person;
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
 	private String city;
 	private String street;
 	

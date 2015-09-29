@@ -1,0 +1,7 @@
+mvn exec:java -Dexec.mainClass="org.hsqldb.Server" -Dexec.args="-database.0 file:target/data/tutorial"
+
+mvn exec:java -Dexec.mainClass="org.liuyf.demos.hibernate.test.TestHibernateLazyLoad"
+
+
+launch hsqldb gui,
+	java -cp hsqldb-2.3.3.jar org.hsqldb.util.DatabaseManagerSwing
