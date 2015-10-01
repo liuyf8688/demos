@@ -1,1 +1,1 @@
-spring-boot.version = 100
+spring-boot.version = 0.1

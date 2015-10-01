@@ -21,7 +21,10 @@ public class Application {
 				System.out.println("##########################################>>>>>: " + ctx.getApplicationName());
 			}
 		});
-		application.run(args);
+		
+		ConfigurableApplicationContext ctx = application.run(args);
+		System.out.println("++++++++++ project.verion ++++++++: " + ctx.getBean(Version.class).getVersion());
+		
 	}
 
 }
