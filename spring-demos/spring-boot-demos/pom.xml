@@ -48,5 +48,6 @@
   </build>
   <modules>
   	<module>spring-boot-logging-demos</module>
+  	<module>spring-boot-cors-demos</module>
   </modules>
 </project>
