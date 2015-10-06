@@ -2,15 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.liuyf.demos</groupId>
-    <artifactId>demos</artifactId>
+    <artifactId>spring-boot-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-demos</artifactId>
-  <packaging>pom</packaging>
-  <name>spring-demos</name>
-  <modules>
-  	<module>../spring-annotations-demos</module>
-  	<module>spring-boot-without-parent-pom-demos</module>
-  	<module>spring-boot-demos</module>
-  </modules>
+  <artifactId>spring-boot-logging-demos</artifactId>
+  <name>Spring Boot Logging Demos</name>
 </project>
