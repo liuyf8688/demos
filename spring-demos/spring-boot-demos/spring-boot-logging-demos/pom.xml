@@ -7,4 +7,12 @@
   </parent>
   <artifactId>spring-boot-logging-demos</artifactId>
   <name>Spring Boot Logging Demos</name>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-web</artifactId>
+  		<optional>true</optional>
+  	</dependency>
+  </dependencies>
 </project>

@@ -5,15 +5,13 @@
     <artifactId>spring-boot-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-boot-cors-demos</artifactId>
-  <name>Spring Boot CORS demos</name>
-  <description>Cross-origin resource sharing</description>
+  <artifactId>spring-boot-jersey-demos</artifactId>
+  <name>Spring Boot Jersey Demos</name>
   
   <dependencies>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
-  		<artifactId>spring-boot-starter-web</artifactId>
-  		<optional>true</optional>
+  		<artifactId>spring-boot-starter-jersey</artifactId>
   	</dependency>
   </dependencies>
 </project>
