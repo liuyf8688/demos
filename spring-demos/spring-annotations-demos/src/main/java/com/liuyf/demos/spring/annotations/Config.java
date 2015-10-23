@@ -9,7 +9,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import com.liuyf.demos.spring.annotations.model.JdbcUserHolder;
 
 @Configuration
-@ComponentScan("com.liuyf.demos.spring.annotations.*")
+@ComponentScan("com.liuyf.demos.spring.annotations")
 @PropertySource("classpath:/config.properties")
 public class Config {
 

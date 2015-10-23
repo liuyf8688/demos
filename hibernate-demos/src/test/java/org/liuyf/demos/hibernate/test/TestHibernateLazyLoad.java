@@ -15,6 +15,7 @@ import org.liuyf.demos.hibernate.pojo.Person;
 
 public class TestHibernateLazyLoad {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() throws HibernateException, MalformedURLException {
 		
