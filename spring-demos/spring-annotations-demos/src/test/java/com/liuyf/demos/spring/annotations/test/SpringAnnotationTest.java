@@ -52,5 +52,11 @@ public class SpringAnnotationTest {
 		assertEquals("PostgrSQL", holder.getNoSupportSQLTypes().get(0));
 		assertEquals("HyperSQL", holder.getNoSupportSQLTypes().get(1));
 	}
+	
+	@Test
+	public void loadDataFromPropertyFlieWithAnnotationExpectedTimeoutIs1800() {
+		JdbcUserHolder holder = context.getBean(JdbcUserHolder.class);
+		assertEquals(1800, holder.getTimeout());
+	}
 
 }

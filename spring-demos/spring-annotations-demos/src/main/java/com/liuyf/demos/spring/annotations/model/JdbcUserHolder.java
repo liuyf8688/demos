@@ -12,7 +12,10 @@ public class JdbcUserHolder {
 	@Value(value = "${jdbc.password}")
 	private String password;
 	
-	@Value(value = "#{ '${currentSQLType:MySQL }' }")
+	@Value("#{ '${timeout:1800 }' }")
+	private int timeout;
+	
+	@Value(value = "#{ '${prefix.currentSQLType:MySQL }' }")
 	private String currentSQLType;
 	
 	@Value(value = "#{ T(java.util.Arrays).asList('${supportSQLTypes:MySQL,SQLServer}') }")
@@ -39,6 +42,10 @@ public class JdbcUserHolder {
 	
 	public List<String> getNoSupportSQLTypes() {
 		return noSupportSQLTypes;
+	}
+	
+	public int getTimeout() {
+		return timeout;
 	}
 
 	public void init() {
