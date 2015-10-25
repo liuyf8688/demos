@@ -38,5 +38,6 @@
   	<module>spring-boot-logging-demos</module>
   	<module>spring-boot-cors-demos</module>
   	<module>spring-boot-jersey-demos</module>
+  	<module>spring-boot-jms-hornetq-demos</module>
   </modules>
 </project>

@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.liuyf.demos</groupId>
+    <artifactId>spring-boot-demos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>spring-boot-jms-hornetq-demos</artifactId>
+  <name>Spring Boot JMS hornetQ Demos</name>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-hornetq</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hornetq</groupId>
+  		<artifactId>hornetq-jms-server</artifactId>
+  	</dependency>
+  </dependencies>
+</project>
