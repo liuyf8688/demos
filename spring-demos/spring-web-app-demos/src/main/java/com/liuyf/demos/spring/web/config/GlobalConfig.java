@@ -1,5 +1,7 @@
 package com.liuyf.demos.spring.web.config;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -11,8 +13,13 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:/application.properties")
 public class GlobalConfig {
 
+	@PostConstruct
+	public void init() {
+		System.out.println("=========================: " + getPropertySourcesBean());
+	}
+	
 	@Bean
-	public PropertySourcesPlaceholderConfigurer getPropertySourcesBean() {
+	public static PropertySourcesPlaceholderConfigurer getPropertySourcesBean() {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 }
