@@ -37,6 +37,8 @@ public class StudentController {
 		users.add(new User("Wang Wu", 9));
 		users.add(new User("Zhao Liu", 7));
 		
+		log.info("======================================== what happened?");
+		
 		return users;
 	}
 	

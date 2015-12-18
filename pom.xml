@@ -14,7 +14,34 @@
   	<module>java8-demos</module>
   	<module>spring-demos</module>
   	<module>alibaba-demos</module>
+  	<module>json-demos</module>
   </modules>
+  <distributionManagement>
+	<repository>
+		<id>demos-release</id>
+		<name>Demos release repo</name>
+		<url>http://maven.oschina.net/content/groups/public/</url>
+		<uniqueVersion>false</uniqueVersion>
+	</repository>
+	<snapshotRepository>
+		<id>demos-snapshot</id>
+		<name>Demos snapshot repo</name>
+		<url>http://maven.oschina.net/content/groups/public/</url>
+		<uniqueVersion>false</uniqueVersion>
+	</snapshotRepository>
+  </distributionManagement>
+  <pluginRepositories>
+	<pluginRepository>
+		<id>demos-plugin</id>
+		<url>http://maven.oschina.net/content/groups/public/</url>
+	</pluginRepository>
+  </pluginRepositories>
+  <repositories>
+	<repository>
+		<id>demos-repo</id>
+		<url>http://maven.oschina.net/content/groups/public/</url>
+	</repository>
+  </repositories>
   <dependencies>
 	<dependency>
 		<groupId>junit</groupId>
