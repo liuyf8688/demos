@@ -2,18 +2,17 @@ package com.liuyf.demos.spring.test.dbunit.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 @Entity
-@NamedQueries({
-	@NamedQuery(name = "Person.list",
-			query = "SELECT p From Person p WHERE p.firstName like :name or p.lastName like :name")
-})
+@Table(name = "tb_person")
 public class Person {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(name = "title")
