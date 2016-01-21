@@ -13,5 +13,6 @@
   	<module>spring-annotations-demos</module>
   	<module>spring-web-app-demos</module>
   	<module>spring-boot-demos</module>
+  	<module>spring-test-dbunit-demos</module>
   </modules>
 </project>

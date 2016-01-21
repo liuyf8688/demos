@@ -19,30 +19,33 @@
   	<module>json-demos</module>
   	<module>apache-demos</module>
   </modules>
-  <distributionManagement>
-	<repository>
-		<id>demos-release</id>
-		<name>Demos release repo</name>
-		<url>http://maven.oschina.net/content/groups/public/</url>
-		<uniqueVersion>false</uniqueVersion>
-	</repository>
-	<snapshotRepository>
-		<id>demos-snapshot</id>
-		<name>Demos snapshot repo</name>
-		<url>http://maven.oschina.net/content/groups/public/</url>
-		<uniqueVersion>false</uniqueVersion>
-	</snapshotRepository>
-  </distributionManagement>
   <pluginRepositories>
 	<pluginRepository>
 		<id>demos-plugin</id>
 		<url>http://maven.oschina.net/content/groups/public/</url>
+	</pluginRepository>
+	<pluginRepository>
+		<id>spring-snapshots</id>
+		<url>http://repo.spring.io/snapshot</url>
+		<snapshots><enabled>true</enabled></snapshots>
+	</pluginRepository>
+	<pluginRepository>
+		<id>spring-milestones</id>
+		<url>http://repo.spring.io/milestone</url>
 	</pluginRepository>
   </pluginRepositories>
   <repositories>
 	<repository>
 		<id>demos-repo</id>
 		<url>http://maven.oschina.net/content/groups/public/</url>
+	</repository>
+	<repository>
+		<id>spring-snapshots</id>
+		<url>http://repo.spring.io/snapshot</url>
+	</repository>
+	<repository>
+		<id>spring-milestones</id>
+		<url>http://repo.spring.io/milestone</url>
 	</repository>
   </repositories>
   <dependencies>

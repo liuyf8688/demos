@@ -10,6 +10,7 @@ public class HibernateSessionUtils {
 
 	private SessionFactory sessionFactory = null;
 	
+	@SuppressWarnings("deprecation")
 	private HibernateSessionUtils() {
 		sessionFactory = new Configuration().configure().buildSessionFactory();
 	}
