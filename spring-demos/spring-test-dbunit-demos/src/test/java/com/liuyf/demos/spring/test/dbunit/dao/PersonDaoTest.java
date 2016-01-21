@@ -1,9 +1,10 @@
 package com.liuyf.demos.spring.test.dbunit.dao;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,10 @@ public class PersonDaoTest extends AbstractDaoTest {
 	
 	@Before
 	public void setUp() throws Exception {
+	}
+	
+	@After
+	public void tearDown() throws Exception {
 	}
 
 	@Test
