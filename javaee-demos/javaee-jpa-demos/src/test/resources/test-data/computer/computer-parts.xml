@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<tb_computer_parts computer_id = "1" name="Inter i5 4300U" type="CPU" />
+	<tb_computer_parts computer_id = "1" name="Hynix" type="8000" />
+</dataset>

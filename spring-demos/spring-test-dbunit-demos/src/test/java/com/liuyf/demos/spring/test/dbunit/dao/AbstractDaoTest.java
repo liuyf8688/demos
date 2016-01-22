@@ -14,6 +14,6 @@ import com.github.springtestdbunit.DbUnitTestExecutionListener;
 	DependencyInjectionTestExecutionListener.class,
 	DbUnitTestExecutionListener.class
 })
-public class AbstractDaoTest {
+public abstract class AbstractDaoTest {
 
 }

@@ -18,6 +18,7 @@
   	<module>unittest-demos</module>
   	<module>json-demos</module>
   	<module>apache-demos</module>
+  	<module>javaee-demos</module>
   </modules>
   <pluginRepositories>
 	<pluginRepository>
@@ -56,13 +57,14 @@
 	</dependency>
 	<dependency>
 		<groupId>ch.qos.logback</groupId>
-		<artifactId>logback-core</artifactId>
-		<version>${logback.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>ch.qos.logback</groupId>
 		<artifactId>logback-classic</artifactId>
 		<version>${logback.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
   </dependencies>
   <build>
