@@ -21,4 +21,8 @@ public class ComputerDao {
 		Query query = entityManager.createQuery("FROM Computer");
 		return query.getResultList();
 	}
+	
+	public Computer getById(Long id) {
+		return entityManager.find(Computer.class, id);
+	}
 }
