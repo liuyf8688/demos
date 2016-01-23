@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dataset>
-	<tb_computer id = "1" brand="Lenovo" model="l12" />
-	<tb_computer id = "2" brand="Dell" model="e1010" />
-	<tb_computer id = "3" brand="Acer" model="a0090" />
-	<tb_computer id = "4" brand="HP" model="hp101" />
+	<tb_computer id="1" brand="Lenovo" model="l12" created="2015-03-11 04:05:19" />
+	<tb_computer id="2" brand="Dell" model="e1010" created="2015-03-11 04:05:19" />
+	<tb_computer id="3" brand="Acer" model="a0090" created="2015-03-11 04:05:19" />
+	<tb_computer id="4" brand="HP" model="hp101" created="2015-03-11 04:05:19" />
 </dataset>

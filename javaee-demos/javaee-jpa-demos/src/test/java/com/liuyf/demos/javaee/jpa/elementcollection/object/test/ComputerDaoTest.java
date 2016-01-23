@@ -1,7 +1,10 @@
 package com.liuyf.demos.javaee.jpa.elementcollection.object.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -9,6 +12,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.github.springtestdbunit.annotation.DatabaseSetup;
+import com.github.springtestdbunit.annotation.ExpectedDatabase;
+import com.github.springtestdbunit.assertion.DatabaseAssertionMode;
 import com.liuyf.demos.javaee.jpa.elementcollection.object.dao.ComputerDao;
 import com.liuyf.demos.javaee.jpa.elementcollection.object.entity.Computer;
 import com.liuyf.demos.spring.test.dbunit.dao.AbstractDaoTest;
@@ -23,7 +28,7 @@ public class ComputerDaoTest extends AbstractDaoTest {
 	}
 
 	@Test
-	@DatabaseSetup(value = { "/test-data/computer/computer.xml", "/test-data/computer/computer-parts.xml" })
+	@DatabaseSetup(value = "/test-data/computer/computer.xml")
 	public void testList() {
 		List<Computer> computers = computerDao.list();
 		assertEquals(4, computers.size());
@@ -40,6 +45,27 @@ public class ComputerDaoTest extends AbstractDaoTest {
 		assertNotNull(computer);
 		assertEquals(3, computer.getParts().size());
 		assertEquals(2, computer.getPhones().size());
+	}
+	
+	@Test
+	@DatabaseSetup(value = {
+			"/test-data/computer/computer.xml",
+			"/test-data/computer/computer-phones.xml"
+			})
+	@ExpectedDatabase(
+			assertionMode = DatabaseAssertionMode.NON_STRICT,
+			value = "/test-data/computer/expected/computer-ignored-created-column.xml")
+	public void testSaveIgnoredCreatedColumn() {
+		Computer computer = new Computer();
+		computer.setBrand("SAMSUNG");
+		computer.setModel("s0109");
+		//
+		computer.setPhones(Arrays.asList("13800138005"));
+		
+		computer.setCreated(new Date());
+		computerDao.save(computer);
+		
+		System.out.println(computer.getId() + "" + computer.getParts());
 	}
 
 }

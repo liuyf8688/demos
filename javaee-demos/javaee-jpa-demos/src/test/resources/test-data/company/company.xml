@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dataset>
-	<tb_computer id = "1" name="CRM Factory" />
-	<tb_computer id = "2" name="Mcon Group" />
+	<tb_company id="1" name="CRM Factory" />
+	<tb_company id="2" name="Mcon Group" />
 </dataset>
