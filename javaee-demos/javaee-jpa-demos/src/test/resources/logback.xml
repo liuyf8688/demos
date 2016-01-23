@@ -11,5 +11,8 @@
   </root>
   
 <!--   <logger name="org.hibernate" level="INFO" /> -->
+  <logger name="com.github.springtestdbunit" level="DEBUG" />
+  <logger name="org.dbunit" level="DEBUG" />
+  <logger name="org.hibernate" level="DEBUG" />
 
 </configuration>

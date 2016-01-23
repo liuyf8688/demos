@@ -50,22 +50,39 @@ public class ComputerDaoTest extends AbstractDaoTest {
 	@Test
 	@DatabaseSetup(value = {
 			"/test-data/computer/computer.xml",
+			"/test-data/computer/computer-parts.xml",
 			"/test-data/computer/computer-phones.xml"
 			})
 	@ExpectedDatabase(
-			assertionMode = DatabaseAssertionMode.NON_STRICT,
-			value = "/test-data/computer/expected/computer-ignored-created-column.xml")
+			value = "/test-data/computer/expected/computer-ignored-created-column.xml",
+			assertionMode = DatabaseAssertionMode.NON_STRICT)
 	public void testSaveIgnoredCreatedColumn() {
 		Computer computer = new Computer();
 		computer.setBrand("SAMSUNG");
 		computer.setModel("s0109");
 		//
 		computer.setPhones(Arrays.asList("13800138005"));
-		
+		//
 		computer.setCreated(new Date());
-		computerDao.save(computer);
 		
-		System.out.println(computer.getId() + "" + computer.getParts());
+		computerDao.save(computer);
+	}
+	
+	@Test
+	@DatabaseSetup(value = {
+			"/test-data/computer/computer.xml",
+			"/test-data/computer/computer-parts.xml",
+			"/test-data/computer/computer-phones.xml"
+			})
+	@ExpectedDatabase(value = "/test-data/computer/expected/computer-without-model-expected.xml",
+			assertionMode = DatabaseAssertionMode.NON_STRICT)
+	public void testSaveWithoutModelExpected() {
+		Computer computer = new Computer();
+		computer.setBrand("SAMSUNG");
+		computer.setPhones(Arrays.asList("13800138005"));
+		computer.setCreated(new Date());
+		
+		computerDao.save(computer);
 	}
 
 }
