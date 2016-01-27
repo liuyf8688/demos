@@ -32,9 +32,9 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create-drop</property>
 
-        <mapping class="org.liuyf.demos.hibernate.pojo.Person" />
-        <mapping class="org.liuyf.demos.hibernate.pojo.Address" />
-        <mapping class="org.liuyf.demos.hibernate.mapping.collection.pojo.UserInfo" />
+        <mapping class="com.liuyf.demos.hibernate.pojo.Person" />
+        <mapping class="com.liuyf.demos.hibernate.pojo.Address" />
+        <mapping class="com.liuyf.demos.hibernate.mapping.collection.pojo.UserInfo" />
 
 
     </session-factory>

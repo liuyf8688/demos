@@ -10,14 +10,14 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 
 import com.github.springtestdbunit.TransactionDbUnitTestExecutionListener;
-import com.liuyf.demos.spring.test.dbunit.listener.ForeignKeyDisabling;
+import com.liuyf.demos.spring.test.dbunit.listener.ForeignKeyDisablingListener;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @TestExecutionListeners({
 	DependencyInjectionTestExecutionListener.class,
 	DirtiesContextTestExecutionListener.class,
 	TransactionDbUnitTestExecutionListener.class,
-	ForeignKeyDisabling.class
+	ForeignKeyDisablingListener.class
 })
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @ContextConfiguration(locations = { "/config/config.xml" })

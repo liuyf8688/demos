@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.liuyf.demos</groupId>
+  <groupId>com.liuyf.demos</groupId>
   <artifactId>demos</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -8,8 +8,19 @@
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<junit.version>4.12</junit.version>
+  	<jcloverslf4j.version>1.7.13</jcloverslf4j.version>
   	<logback.version>1.1.3</logback.version>
   </properties>
+  <repositories>
+	<repository>
+		<id>spring-snapshots</id>
+		<url>http://repo.spring.io/snapshot</url>
+	</repository>
+	<repository>
+		<id>spring-milestones</id>
+		<url>http://repo.spring.io/milestone</url>
+	</repository>
+  </repositories>
   <modules>
   	<module>hibernate-demos</module>
   	<module>java8-demos</module>
@@ -20,35 +31,6 @@
   	<module>apache-demos</module>
   	<module>javaee-demos</module>
   </modules>
-  <pluginRepositories>
-	<pluginRepository>
-		<id>demos-plugin</id>
-		<url>http://maven.oschina.net/content/groups/public/</url>
-	</pluginRepository>
-	<pluginRepository>
-		<id>spring-snapshots</id>
-		<url>http://repo.spring.io/snapshot</url>
-		<snapshots><enabled>true</enabled></snapshots>
-	</pluginRepository>
-	<pluginRepository>
-		<id>spring-milestones</id>
-		<url>http://repo.spring.io/milestone</url>
-	</pluginRepository>
-  </pluginRepositories>
-  <repositories>
-	<repository>
-		<id>demos-repo</id>
-		<url>http://maven.oschina.net/content/groups/public/</url>
-	</repository>
-	<repository>
-		<id>spring-snapshots</id>
-		<url>http://repo.spring.io/snapshot</url>
-	</repository>
-	<repository>
-		<id>spring-milestones</id>
-		<url>http://repo.spring.io/milestone</url>
-	</repository>
-  </repositories>
   <dependencies>
 	<dependency>
 		<groupId>junit</groupId>
@@ -59,12 +41,11 @@
 		<groupId>ch.qos.logback</groupId>
 		<artifactId>logback-classic</artifactId>
 		<version>${logback.version}</version>
-		<exclusions>
-			<exclusion>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-			</exclusion>
-		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>jcl-over-slf4j</artifactId>
+		<version>${jcloverslf4j.version}</version>
 	</dependency>
   </dependencies>
   <build>
