@@ -2,8 +2,6 @@ package com.liuyf.demos.cache.ehcache2.pojo;
 
 import java.io.Serializable;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 public class Person implements Serializable {
 
 	private static final long serialVersionUID = -4388752173573248268L;
@@ -40,7 +38,7 @@ public class Person implements Serializable {
 	
 	@Override
 	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
+		return "[ id=" + id + ", name=" + name +", age=" + age + "]";
 	}
 	
 }

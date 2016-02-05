@@ -1,4 +1,7 @@
-package com.liuyf.demos.cache.ehcache2;
+package com.liuyf.demos.cache.ehcache2.test;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 import com.liuyf.demos.cache.ehcache2.pojo.Person;
 
@@ -6,16 +9,17 @@ import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
 
-public class VerifyEhcacheIsNotDeepCopy {
-	
+public class VerifyEhcacheIsDeepCopy {
+
 	private static final String PERSON = "PERSON_";
 
-	public static void main(String[] args) {
+	@Test
+	public void test() {
 		
 		final CacheManager cacheManager = new CacheManager();
 		try {
 		
-			final Ehcache cache = cacheManager.getEhcache("hello-world");
+			final Ehcache cache = cacheManager.getEhcache("copyCache");
 			
 			System.out.println(cache);
 			
@@ -25,8 +29,8 @@ public class VerifyEhcacheIsNotDeepCopy {
 			person.setAge(16);
 			//
 			String key = PERSON + person.getId();
-			
-			System.out.println(" === before putting cache, " + person.toString());
+			String snapshot = person.toString();
+			System.out.println(" === before putting cache, " + snapshot);
 			
 			final Element element = new Element(key, person);
 			cache.put(element);
@@ -37,7 +41,10 @@ public class VerifyEhcacheIsNotDeepCopy {
 			Element e = cache.get(key);
 			Person p = (Person)e.getObjectValue();
 			
-			System.out.println(" === get from cache, " + p.toString());
+			String actual = p.toString();
+			System.out.println(" === get from cache, " + actual);
+			
+			Assert.assertEquals(snapshot, actual);
 		} finally {
 			cacheManager.shutdown();
 		}
