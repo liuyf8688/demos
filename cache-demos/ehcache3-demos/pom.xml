@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.liuyf.demos</groupId>
+    <artifactId>cache-demos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ehcache3-demos</artifactId>
+  <name>Ehcache3 Demos</name>
+  <dependencies>
+	<dependency>
+		<groupId>org.ehcache</groupId>
+		<artifactId>ehcache</artifactId>
+		<version>3.0.0.m4</version>
+	</dependency>
+<!-- 	<dependency> -->
+<!-- 		<groupId>javax.cache</groupId> -->
+<!-- 		<artifactId>cache-api</artifactId> -->
+<!-- 		<version>1.0.0</version> -->
+<!-- 	</dependency> -->
+	<dependency>
+		<groupId>org.terracotta</groupId>
+		<artifactId>management-model</artifactId>
+		<version>2.0.0</version>
+	</dependency>
+  </dependencies>
+</project>

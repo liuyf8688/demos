@@ -30,8 +30,15 @@
   	<module>json-demos</module>
   	<module>apache-demos</module>
   	<module>javaee-demos</module>
+  	<module>cache-demos</module>
+  	<module>mybatis-demos</module>
   </modules>
   <dependencies>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.4</version>
+	</dependency>
 	<dependency>
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
