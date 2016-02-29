@@ -32,6 +32,7 @@
   	<module>javaee-demos</module>
   	<module>cache-demos</module>
   	<module>mybatis-demos</module>
+  	<module>web-app-demos</module>
   </modules>
   <dependencies>
 	<dependency>
