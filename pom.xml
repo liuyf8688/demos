@@ -34,6 +34,7 @@
   	<module>mybatis-demos</module>
   	<module>web-app-demos</module>
   	<module>pmd-demos</module>
+  	<module>hibernate-5.1-demos</module>
   </modules>
   <dependencies>
 	<dependency>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+<!--         <property name="connection.driver_class">org.h2.Driver</property> -->
+<!--         <property name="connection.url">jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MVCC=TRUE</property> -->
+<!--         <property name="connection.username">sa</property> -->
+<!--         <property name="connection.password"/> -->
+        
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/liuyf_test?useUnicode=true&amp;characterEncoding=utf8</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        
+        <!-- many to one -->
+        <mapping class="com.liuyf.demos.hibernate51.pojo.manytoone.PersonPojo" />
+        <mapping class="com.liuyf.demos.hibernate51.pojo.manytoone.PhonePojo" />
+        
+        <!-- Unidirectional @OneToMany -->
+        <mapping class="com.liuyf.demos.hibernate51.pojo.unidirectional.onetomany.WriterPojo" />
+        <mapping class="com.liuyf.demos.hibernate51.pojo.unidirectional.onetomany.BookPojo" />
+
+		<!-- Bidirectional @OneToMany -->
+		<mapping class="com.liuyf.demos.hibernate51.pojo.bidirectional.onetomany.CarPojo" />
+		<mapping class="com.liuyf.demos.hibernate51.pojo.bidirectional.onetomany.PartPojo" />
+		
+		<!-- Unidirectional @oneToOne -->
+		<mapping class="com.liuyf.demos.hibernate51.pojo.unidirectional.onetoone.AudiencePojo" />
+		<mapping class="com.liuyf.demos.hibernate51.pojo.unidirectional.onetoone.TicketPojo" />
+		
+		<!-- Bidirectional @oneToOne -->
+		<mapping class="com.liuyf.demos.hibernate51.pojo.bidirectional.onetoone.GoodsPojo" />
+		<mapping class="com.liuyf.demos.hibernate51.pojo.bidirectional.onetoone.GoodsDetailPojo" />
+    </session-factory>
+
+</hibernate-configuration>
