@@ -8,6 +8,7 @@ public class SnoarExample {
 		@SuppressWarnings("unused")
 		innerClass InnerClass = new innerClass();
 		
+		@SuppressWarnings("unused")
 		Integer num = null;
 //		if (num.intValue() == 0) {
 //			
