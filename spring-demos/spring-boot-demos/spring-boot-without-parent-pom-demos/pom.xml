@@ -2,14 +2,17 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.liuyf.demos</groupId>
-    <artifactId>spring-demos</artifactId>
+    <artifactId>spring-boot-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-data-demos</artifactId>
-  <packaging>pom</packaging>
-  <name>Spring Data Demos</name>
-  <modules>
-  	<module>spring-data-jpa-demos</module>
-  	<module>spring-data-mongodb-demos</module>
-  </modules>
+  <artifactId>spring-boot-without-parent-pom-demos</artifactId>
+  <name>Spring Boot Without Parent Pom Demos</name>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-web</artifactId>
+  	</dependency>
+  </dependencies>
+
 </project>

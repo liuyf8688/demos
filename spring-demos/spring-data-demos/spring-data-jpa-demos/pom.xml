@@ -9,33 +9,48 @@
   <name>Spring Data JPA Demos</name>
   <dependencies>
 	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.2.5.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>4.2.5.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.1.0.Final</version>
+	</dependency>
+	<dependency>
 		<groupId>org.springframework.data</groupId>
 		<artifactId>spring-data-jpa</artifactId>
 		<version>1.9.4.RELEASE</version>
 		<exclusions>
 			<exclusion>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-orm</artifactId>
-			</exclusion>
-			<exclusion>
-				<groupId>org.springframework</groupId>
 				<artifactId>spring-tx</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>spring-core</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>spring-aop</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>spring-beans</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>spring-context</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>spring-orm</artifactId>
+				<groupId>org.springframework</groupId>
 			</exclusion>
 		</exclusions>
 	</dependency>
@@ -44,6 +59,7 @@
 		<artifactId>spring-test-dbunit-demos</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<type>test-jar</type>
+		<scope>test</scope>
 	</dependency>
   </dependencies>
 </project>

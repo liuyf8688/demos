@@ -2,14 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.liuyf.demos</groupId>
-    <artifactId>spring-demos</artifactId>
+    <artifactId>spring-data-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-data-demos</artifactId>
-  <packaging>pom</packaging>
-  <name>Spring Data Demos</name>
-  <modules>
-  	<module>spring-data-jpa-demos</module>
-  	<module>spring-data-mongodb-demos</module>
-  </modules>
+  <artifactId>spring-data-mongodb-demos</artifactId>
+  <name>Spring Data Mongodb Demos</name>
+  <dependencies>
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-mongodb</artifactId>
+		<version>1.8.4.RELEASE</version>
+	</dependency>
+  </dependencies>
 </project>

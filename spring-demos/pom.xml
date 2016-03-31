@@ -9,7 +9,6 @@
   <packaging>pom</packaging>
   <name>spring-demos</name>
   <modules>
-  	<module>spring-boot-without-parent-pom-demos</module>
   	<module>spring-annotations-demos</module>
   	<module>spring-web-app-demos</module>
   	<module>spring-boot-demos</module>
