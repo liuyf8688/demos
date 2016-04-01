@@ -28,8 +28,9 @@ public class TestQueryDsl {
 		EntityTransaction transaction = em.getTransaction();
 		
 		try {
-			transaction.begin();
 			PersonPojo pojo = new PersonPojo();
+			
+			transaction.begin();
 			em.persist(pojo);
 			transaction.commit();
 			
@@ -37,6 +38,8 @@ public class TestQueryDsl {
 		} catch (Exception e) {
 			e.printStackTrace();
 			transaction.rollback();
+			
+			throw e;
 		} finally {
 			em.close();
 		}
