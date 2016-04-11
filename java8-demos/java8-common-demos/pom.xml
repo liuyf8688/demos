@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>java8-common-demos</artifactId>
-  <name>Java8 Common Demos</name>
+  <name>Java 8 Common Demos</name>
 </project>
