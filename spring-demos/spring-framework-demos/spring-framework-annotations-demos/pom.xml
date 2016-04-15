@@ -2,16 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.liuyf.demos</groupId>
-    <artifactId>demos</artifactId>
+    <artifactId>spring-framework-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-demos</artifactId>
-  <packaging>pom</packaging>
-  <name>spring-demos</name>
-  <modules>
-  	<module>spring-boot-demos</module>
-  	<module>spring-test-dbunit-demos</module>
-  	<module>spring-data-demos</module>
-  	<module>spring-framework-demos</module>
-  </modules>
+  <artifactId>spring-framework-annotations-demos</artifactId>
+  <name>Spring Framework Annotations Demos</name>
+  <dependencies>
+  	<dependency>
+	<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.2.1.RELEASE</version>
+	</dependency>
+  </dependencies>
 </project>
