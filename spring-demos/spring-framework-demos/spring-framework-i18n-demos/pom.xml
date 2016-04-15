@@ -5,6 +5,6 @@
     <artifactId>spring-framework-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-framework-annotations-demos</artifactId>
-  <name>Spring Framework Annotations Demos</name>
+  <artifactId>spring-framework-i18n-demos</artifactId>
+  <name>Spring Framework i18n Demos</name>
 </project>

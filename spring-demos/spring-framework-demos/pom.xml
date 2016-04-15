@@ -11,5 +11,13 @@
   <modules>
 	<module>spring-framework-annotations-demos</module>
 	<module>spring-framework-web-app-demos</module>
+	<module>spring-framework-i18n-demos</module>
   </modules>
+  <dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.2.1.RELEASE</version>
+		</dependency>
+  </dependencies>
 </project>
