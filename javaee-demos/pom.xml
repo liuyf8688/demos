@@ -10,5 +10,6 @@
   <name>JavaEE Demos</name>
   <modules>
   	<module>javaee-jpa-demos</module>
+  	<module>javaee-jsf-demos</module>
   </modules>
 </project>
