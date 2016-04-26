@@ -12,8 +12,10 @@
 		p:host-name="localhost"
 		p:port="6379" />
 
-	<bean id="redisTemplate"
-		class="org.springframework.data.redis.core.RedisTemplate"
+	<bean class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory"/>
+		
+	<bean class="org.springframework.data.redis.core.StringRedisTemplate"
 		p:connection-factory-ref="jedisConnectionFactory"/>
 		
 </beans>
