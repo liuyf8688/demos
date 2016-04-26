@@ -11,5 +11,6 @@
   <modules>
   	<module>spring-data-jpa-demos</module>
   	<module>spring-data-mongodb-demos</module>
+  	<module>spring-data-redis</module>
   </modules>
 </project>
