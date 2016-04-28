@@ -24,6 +24,7 @@ public class JedisTest {
 	
 	@Test
 	public void test() {
+//		template.opsForValue().set("TonyLiu", "TonyLiu");
 		template.opsForList().leftPush("TonyLiu", "TonyLiu");
 		Assert.assertTrue(template.hasKey("TonyLiu"));
 	}
