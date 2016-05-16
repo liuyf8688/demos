@@ -27,6 +27,7 @@
   	<module>pmd-demos</module>
   	<module>hibernate-5.1-demos</module>
   	<module>querydsl-demos</module>
+  	<module>algorithm-demos</module>
   </modules>
   <dependencies>
 	<dependency>

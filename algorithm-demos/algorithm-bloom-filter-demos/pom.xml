@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.liuyf.demos</groupId>
+    <artifactId>algorithm-demos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>algorithm-bloom-filter-demos</artifactId>
+  <name>Algorithm Bloom Filter Demos</name>
+  <dependencies>
+	<dependency>
+		<groupId>com.baqend</groupId>
+		<artifactId>bloom-filter</artifactId>
+		<version>1.0.7</version>
+	</dependency>
+  </dependencies>
+  <repositories>
+	<repository>
+		<snapshots>
+		<enabled>false</enabled>
+		</snapshots>
+		<id>central</id>
+		<name>bintray</name>
+		<url>http://jcenter.bintray.com</url>
+	</repository>
+  </repositories>
+</project>
