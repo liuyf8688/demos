@@ -1,4 +1,4 @@
-package com.liuyf.demos.java8.common;
+package com.liuyf.demos.java8.common.callable;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

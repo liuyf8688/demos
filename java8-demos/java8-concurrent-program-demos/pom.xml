@@ -2,15 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.liuyf.demos</groupId>
-    <artifactId>demos</artifactId>
+    <artifactId>java8-demos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>java8-demos</artifactId>
-  <packaging>pom</packaging>
-  <name>Java 8 Demo</name>
-  <modules>
-  	<module>java8-lambda-demos</module>
-  	<module>java8-common-demos</module>
-  	<module>java8-concurrent-program-demos</module>
-  </modules>
+  <artifactId>java8-concurrent-program-demos</artifactId>
+  <name>Java 8 Concurrent Program Demos</name>
 </project>

@@ -1,8 +1,7 @@
-package com.liuyf.demos.java8.common;
+package com.liuyf.demos.java8.common.runnable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -27,12 +26,12 @@ private static ExecutorService executor = Executors.newFixedThreadPool(2);
 	public void test() throws Exception {
 		
 		long startTime = System.currentTimeMillis();
-		List<Future<Integer>> futures = new ArrayList<>();
+		List<Future<?>> futures = new ArrayList<>();
 		for (int i = 0; i < 2; i ++) {
 			futures.add(getResult(i));
 		}
 		
-		for (Future<Integer> f : futures) {
+		for (Future<?> f : futures) {
 			try {
 				System.out.println(" ===>>> " + f.get(60, TimeUnit.SECONDS));
 			} catch (InterruptedException | ExecutionException | TimeoutException e) {
@@ -43,24 +42,21 @@ private static ExecutorService executor = Executors.newFixedThreadPool(2);
 		System.out.println(" ===>>> finish time: " + (System.currentTimeMillis() - startTime));
 	}
 
-	private Future<Integer> getResult(final int index) throws Exception {
+	private Future<?> getResult(final int index) {
 		
-		Callable<Integer> callable = new Callable<Integer>() {
-
+		Runnable runnable = new Runnable() {
+			
 			@Override
-			public Integer call() throws Exception {
-				
+			public void run() {
 				System.out.println(" ===>>> index: " + index);
-				Thread.sleep(3000);
-				
-				if (index == 0) {
-					return null;
-				} else {
-					return 1;
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
 			}
 		};
 		
-		return executor.submit(callable);
+		return executor.submit(runnable);
 	}
 }
