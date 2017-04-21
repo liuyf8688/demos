@@ -13,7 +13,7 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   <servlet>
-    <servlet-name>application</servlet-name>
+    <servlet-name>api</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>dispatchOptionsRequest</param-name>
@@ -22,7 +22,7 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>application</servlet-name>
-    <url-pattern>/application/*</url-pattern>
+    <servlet-name>api</servlet-name>
+    <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 </web-app>

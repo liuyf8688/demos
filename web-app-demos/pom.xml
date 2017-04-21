@@ -10,5 +10,6 @@
   <name>Web App Demos</name>
   <modules>
   	<module>urlrewrite-demos</module>
+  	<module>simple-restful-demos</module>
   </modules>
 </project>

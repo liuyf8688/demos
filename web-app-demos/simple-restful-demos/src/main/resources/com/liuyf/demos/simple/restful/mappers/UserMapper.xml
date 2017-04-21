@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- liuchao -->
+<mapper namespace="com.liuyf.demos.simple.restful.mappers.UserMapper">
+
+    <select id="findByType" parameterType="int" resultType="com.liuyf.demos.simple.restful.pojo.UserPojo">
+        select
+            id, user_name, age
+        FROM tb_user 
+        WHERE user_type = #{userType}
+    </select>
+    
+</mapper>
