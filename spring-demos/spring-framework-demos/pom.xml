@@ -12,6 +12,7 @@
 	<module>spring-framework-annotations-demos</module>
 	<module>spring-framework-web-app-demos</module>
 	<module>spring-framework-i18n-demos</module>
+	<module>spring-framework-web-mvc-demos</module>
   </modules>
   <dependencies>
 		<dependency>

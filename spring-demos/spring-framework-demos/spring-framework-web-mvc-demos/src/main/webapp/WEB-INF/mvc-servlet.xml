@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+    <context:component-scan base-package="com.liuyf.demos.spring.web.mvc.controllers" />
+
+    <mvc:annotation-driven enable-matrix-variables="true"/>
+
+<!--     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> -->
+<!--         <property name="messageConverters"> -->
+<!--             <util:list id="beanList"> -->
+<!--                 <ref bean="stringHttpMessageConverter"/> -->
+<!--                 <ref bean="marshallingHttpMessageConverter"/> -->
+<!--             </util:list> -->
+<!--         </property> -->
+<!--     </bean> -->
+    
+<!--     <bean id="stringHttpMessageConverter" -->
+<!--             class="org.springframework.http.converter.StringHttpMessageConverter"/> -->
+    
+<!--     <bean id="marshallingHttpMessageConverter" -->
+<!--             class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter"> -->
+<!--         <property name="marshaller" ref="castorMarshaller"/> -->
+<!--         <property name="unmarshaller" ref="castorMarshaller"/> -->
+<!--     </bean> -->
+    
+<!--     <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/> -->
+
+    <bean id="localeChangeInterceptor"
+        class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        
+        <property name="paramName" value="siteLanguage" />
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+        <property name="interceptors">
+            <list>
+                <ref bean="localeChangeInterceptor" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    
+<!--     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> -->
+<!--         <property name="defaultLocale" value="en" /> -->
+<!--         <property name="defaultTimeZone" value="America/Los_Angeles" /> -->
+<!--         <property name="cookieName" value="my-cookie-name" /> -->
+        <!-- in seconds -->
+<!--         <property name="cookieMaxAge" value="100000" /> -->
+<!--         <property name="cookiePath" value="/spring-framework-web-mvc-demos/" /> -->
+<!--     </bean> -->
+    
+</beans>
