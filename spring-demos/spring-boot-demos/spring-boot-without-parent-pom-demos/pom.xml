@@ -17,6 +17,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-actuator</artifactId>
 	</dependency>
+    
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
 	<!-- Jolokia is a JMX-HTTP bridge giving an alternative method of accessing JMX beans -->
 	<dependency>
 		<groupId>org.jolokia</groupId>

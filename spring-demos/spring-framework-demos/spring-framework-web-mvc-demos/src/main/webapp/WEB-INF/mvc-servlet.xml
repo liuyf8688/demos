@@ -16,7 +16,7 @@
 
     <context:component-scan base-package="com.liuyf.demos.spring.web.mvc.controllers" />
 
-    <mvc:annotation-driven enable-matrix-variables="true"/>
+    <mvc:annotation-driven enable-matrix-variables="true" />
 
 <!--     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> -->
 <!--         <property name="messageConverters"> -->
@@ -44,13 +44,21 @@
         <property name="paramName" value="siteLanguage" />
     </bean>
 
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
-        <property name="interceptors">
-            <list>
-                <ref bean="localeChangeInterceptor" />
-            </list>
-        </property>
-    </bean>
+    <!-- interceptors -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <ref bean="localeChangeInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    
+<!--     <bean id="requestMappingHandlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"> -->
+<!--         <property name="interceptors"> -->
+<!--             <list> -->
+<!--                 <ref bean="localeChangeInterceptor" /> -->
+<!--             </list> -->
+<!--         </property> -->
+<!--     </bean> -->
     
     <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -58,13 +66,13 @@
         <property name="suffix" value=".jsp" />
     </bean>
     
-<!--     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> -->
-<!--         <property name="defaultLocale" value="en" /> -->
-<!--         <property name="defaultTimeZone" value="America/Los_Angeles" /> -->
-<!--         <property name="cookieName" value="my-cookie-name" /> -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="en" />
+        <property name="defaultTimeZone" value="America/Los_Angeles" />
+        <property name="cookieName" value="my-cookie-name" />
         <!-- in seconds -->
-<!--         <property name="cookieMaxAge" value="100000" /> -->
-<!--         <property name="cookiePath" value="/spring-framework-web-mvc-demos/" /> -->
-<!--     </bean> -->
+        <property name="cookieMaxAge" value="100000" />
+        <property name="cookiePath" value="/spring-framework-web-mvc-demos/" />
+    </bean>
     
 </beans>
