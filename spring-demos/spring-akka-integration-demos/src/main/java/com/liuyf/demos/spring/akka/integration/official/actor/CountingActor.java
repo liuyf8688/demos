@@ -1,5 +1,6 @@
 package com.liuyf.demos.spring.akka.integration.official.actor;
 
+import akka.actor.UntypedAbstractActor;
 import akka.actor.UntypedActor;
 import com.liuyf.demos.spring.akka.integration.official.service.CountingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class CountingActor extends UntypedActor {
+public class CountingActor extends UntypedAbstractActor {
 
     public static class Count {}
 

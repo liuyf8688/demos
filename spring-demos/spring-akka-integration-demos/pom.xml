@@ -9,9 +9,10 @@
   <name>Spring Akka Integration Demos</name>
   
   <properties>
-    <spring.version>4.3.4.RELEASE</spring.version>
-    <akka.version>2.4.14</akka.version>
+    <spring.version>4.3.9.RELEASE</spring.version>
+    <akka.version>2.5.3</akka.version>
     <scala-java8-compat_2.11.version>0.7.0</scala-java8-compat_2.11.version>
+    <slf4j.version>1.7.13</slf4j.version>
   </properties>
   
   <dependencies>
@@ -44,6 +45,12 @@
           <groupId>org.springframework</groupId>
           <artifactId>spring-test</artifactId>
           <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>${slf4j.version}</version>
       </dependency>
   </dependencies>
 
