@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.liuyf.demos</groupId>
+    <artifactId>spring-demos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>spring-akka-integration-demos</artifactId>
+  <name>Spring Akka Integration Demos</name>
+  
+  <properties>
+    <spring.version>4.3.4.RELEASE</spring.version>
+    <akka.version>2.4.14</akka.version>
+    <scala-java8-compat_2.11.version>0.7.0</scala-java8-compat_2.11.version>
+  </properties>
+  
+  <dependencies>
+
+      <dependency>
+          <groupId>org.scala-lang.modules</groupId>
+          <artifactId>scala-java8-compat_2.11</artifactId>
+          <version>${scala-java8-compat_2.11.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+ 
+      <dependency>
+          <groupId>com.typesafe.akka</groupId>
+          <artifactId>akka-actor_2.11</artifactId>
+          <version>${akka.version}</version>
+          <exclusions>
+              <exclusion>
+                  <artifactId>scala-library</artifactId>
+                  <groupId>org.scala-lang</groupId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-test</artifactId>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+  
+</project>

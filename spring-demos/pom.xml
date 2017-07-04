@@ -13,5 +13,6 @@
   	<module>spring-test-dbunit-demos</module>
   	<module>spring-data-demos</module>
   	<module>spring-framework-demos</module>
+  	<module>spring-akka-integration-demos</module>
   </modules>
 </project>
