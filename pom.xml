@@ -29,7 +29,8 @@
   	<module>querydsl-demos</module>
   	<module>algorithm-demos</module>
   	<module>actor-akka-demos</module>
-      <module>kotlin-demos</module>
+  	<module>kotlin-demos</module>
+      <module>scala-demos</module>
   </modules>
   <dependencies>
 	<dependency>
