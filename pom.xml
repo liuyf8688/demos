@@ -31,6 +31,7 @@
   	<module>actor-akka-demos</module>
   	<module>kotlin-demos</module>
       <module>scala-demos</module>
+      <module>server-side-framework-demos</module>
   </modules>
   <dependencies>
 	<dependency>

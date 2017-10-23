@@ -12,5 +12,6 @@
   	<module>java8-lambda-demos</module>
   	<module>java8-common-demos</module>
   	<module>java8-concurrent-program-demos</module>
+      <module>java8-nio-demos</module>
   </modules>
 </project>

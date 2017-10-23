@@ -19,7 +19,7 @@ public class CompletionServiceDemo {
 		
 		List<Future<Integer>> futures = new ArrayList<>();
 		
-		for (int i = 0; i < 2; i ++) {
+		for (int i = 0; i < 10; i ++) {
 			
 			final int index = i;
 			Future<Integer> future = completionService.submit(new Callable<Integer>() {
@@ -27,7 +27,7 @@ public class CompletionServiceDemo {
 				@Override
 				public Integer call() throws Exception {
 					if (index == 0) {
-						Thread.sleep(2 * 10_000L);
+						Thread.sleep(10 * 10_000L);
 					} else {
 						Thread.sleep(10_000L);
 					}
@@ -36,11 +36,23 @@ public class CompletionServiceDemo {
 			});
 			futures.add(future);
 		}
-		
+
+		long start = System.currentTimeMillis();
+		/**
 		for (Future<Integer> future : futures) {
 			System.out.println(future.get());
 		}
-		
+		System.out.println(System.currentTimeMillis() - start);
+		 */
+
+		// 没有对比就没有伤害
+		for (int i = 0; i < futures.size(); i ++) {
+			Future<Integer> future = completionService.take();
+			System.out.println(future.get());
+		}
+
+		System.out.println(System.currentTimeMillis() - start);
+
 		es.shutdown();
 	}
 }
