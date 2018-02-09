@@ -36,5 +36,6 @@
   	<module>spring-boot-jersey-demos</module>
   	<module>spring-boot-jms-hornetq-demos</module>
   	<module>spring-boot-without-parent-pom-demos</module>
+  	<module>spring-boot-amqp-rabbitmq-demos</module>
   </modules>
 </project>
